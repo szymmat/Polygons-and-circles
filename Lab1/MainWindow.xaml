@@ -59,7 +59,7 @@
                 </StackPanel>
             </StackPanel>
             <StackPanel Grid.Column="3" IsEnabled="False" x:Name="PolygonStackPanel">
-                <Label>Polygon edit:</Label>
+                <Label>Edit polygon:</Label>
                 <StackPanel Orientation="Horizontal">
                     <Label>X offset:</Label>
                     <TextBox x:Name="txtPolygonOffsetX" Width="100"></TextBox>
