@@ -1,0 +1,116 @@
+﻿<Window x:Class="Lab1.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Lab1"
+        mc:Ignorable="d"
+        Title="Polygons and circles" Height="800" Width="1000" WindowStartupLocation="CenterScreen" Loaded="Window_Loaded"> 
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+        </Grid.RowDefinitions>
+        <Canvas x:Name="canvas" Grid.Row="1" Background="AliceBlue" MouseLeftButtonDown="canvas_MouseLeftButtonDown">
+        </Canvas>
+        <Grid Grid.Row="0" Background="AntiqueWhite">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <StackPanel Grid.Column="0">
+                <Button x:Name="btnPolygon" Grid.Column="0"  Width="100" Height="50" HorizontalAlignment="Left" Click="btnPolygon_Click">New polygon</Button>
+                <Button x:Name="btnCircle" Grid.Column="0"  Width="100" Height="50" HorizontalAlignment="Left" Click="btnCircle_Click">New circle</Button>
+            </StackPanel>
+            
+            <StackPanel Grid.Column="1" IsEnabled="False" x:Name="VertexStackPanel">
+                <Label>Edit vertex:</Label>
+                <StackPanel Orientation="Horizontal">
+                    <Label>X offset:</Label>
+                    <TextBox x:Name="txtVertexOffsetX" Width="100"></TextBox>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal">
+                    <Label>Y offset:</Label>
+                    <TextBox x:Name="txtVertexOffsetY" Width="100"></TextBox>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                    <Button x:Name="btnEditVertex" Click="btnEditVertex_Click">Move</Button>
+                    <Button x:Name="btnDeleteVertex" Click="btnDeleteVertex_Click">Delete</Button>
+                </StackPanel>
+            </StackPanel>
+            <StackPanel Grid.Column="2" IsEnabled="False" x:Name="EdgeStackPanel">
+                <Label>Edit edge:</Label>
+                <StackPanel Orientation="Horizontal">
+                    <Label>X offset:</Label>
+                    <TextBox x:Name="txtEdgeOffsetX" Width="100"></TextBox>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal">
+                    <Label>Y offset:</Label>
+                    <TextBox x:Name="txtEdgeOffsetY" Width="100"></TextBox>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                    <Button x:Name="btnEditEdge" Click="btnEditEdge_Click">Move</Button>
+                    <Button x:Name="btnSubdivisionEdge" Click="btnSubdivisionEdge_Click">Subdivision</Button>
+                </StackPanel>
+            </StackPanel>
+            <StackPanel Grid.Column="3" IsEnabled="False" x:Name="PolygonStackPanel">
+                <Label>Polygon edit:</Label>
+                <StackPanel Orientation="Horizontal">
+                    <Label>X offset:</Label>
+                    <TextBox x:Name="txtPolygonOffsetX" Width="100"></TextBox>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal">
+                    <Label>Y offset:</Label>
+                    <TextBox x:Name="txtPolygonOffsetY" Width="100"></TextBox>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                    <Button x:Name="btnEditPolygon" Click="btnEditPolygon_Click">Move</Button>
+                    <Button x:Name="btnDeletePolygon" Click="btnDeletePolygon_Click">Delete</Button>
+                </StackPanel>
+            </StackPanel>
+            <StackPanel Grid.Column="4" IsEnabled="False" x:Name="CircleStackPanel">
+                <Label>Edit circle:</Label>
+                <StackPanel Orientation="Horizontal">
+                    <Label>New X of center:</Label>
+                    <TextBox x:Name="txtCircleOffsetX" Width="100"></TextBox>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal">
+                    <Label>New Y of center</Label>
+                    <TextBox x:Name="txtCircleOffsetY" Width="100"></TextBox>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal">
+                    <Label>New radius:</Label>
+                    <TextBox x:Name="txtCircleChangeRadius" Width="100"></TextBox>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                    <Button x:Name="btnEditCircle" Click="btnEditCircle_Click">Move</Button>
+                    <Button x:Name="btnDeleteCircle" Click="btnDeleteCircle_Click">Delete</Button>
+                </StackPanel>
+            </StackPanel>
+            <StackPanel Grid.Column="5" x:Name="EdgePairStackPanel" IsEnabled="False">
+                <Label>Edit edge pairs:</Label>
+                <RadioButton IsChecked="True" x:Name="radioPairNone">No relation</RadioButton>
+                <RadioButton x:Name="radioPerpendicular">Perpendicular</RadioButton>
+                <Button x:Name="btnEditEdgePairRestrictions" Click="btnEditEdgePairRestrictions_Click">Edit</Button>
+            </StackPanel>
+            <StackPanel Grid.Column="6" x:Name="EdgeRestrictionsStackPanel" IsEnabled="False">
+                <Label>Other restrictions:</Label>
+                <RadioButton x:Name="radioNone">No relations</RadioButton>
+                <RadioButton x:Name="radioLength">
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock>Length:</TextBlock>
+                        <TextBox x:Name="txtEdgeLength" Width="75"></TextBox>
+                    </StackPanel>
+                </RadioButton>
+                <RadioButton x:Name="radioTangent" IsEnabled="False">Tangent to circle</RadioButton>
+                <Button x:Name="btnEditEdgeOtherRestrictions" Click="btnEditEdgeOtherRestrictions_Click">Edit</Button>
+            </StackPanel>
+        </Grid>
+        
+    </Grid>
+</Window>

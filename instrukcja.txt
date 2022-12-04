@@ -1,0 +1,36 @@
+Dodawanie nowego wielokąta - naciśnięcie przycisku "Wielokąt", wybranie kolejnych wierzchołków klikając na ekran w wybranych punktach i ponowne naciśnięcie przycisku, który zmieni opis na "Koniec"
+Dodawanie nowego okręgu - naciśnięcie przycisku "Okrąg", wpisanie współrzędnych środka i promienia.
+Zaznaczanie wierzchołka wielokąta - naciśnięcie LPM na reprezentujący go kwadracik. Uaktywni się edycja wierzchołka i edycja wielokąta w menu.
+Zaznaczanie krawędzi - naciśnięcie LPM na reprezentującą ją linię. Uaktywni się edycja krawędzi i edycja ograniczeń krawędzi w menu.
+Zaznaczanie okręgu - naciśnięcie LPM wewnątrz okręgu. Uaktywni się edycja okręgu w menu.
+Zaznaczanie pary krawędzi - naciśnięcie LPM na jedną krawędź, a potem na drugą. Późniejsze kliknięcie na kolejną krawędź odznaczy tą, która była zaznaczona wcześniej.
+Edycja krawędzi i ograniczeń krawędzi się odznaczy, a zaznaczy się edycja pary krawędzi.
+
+Przesunięcie wierzchołka - po zaznaczeniu wybranego wierzchołka należy w podmenu "edycja wierzchołka" wpisać przesunięcie na osi X i Y i nacisnąć "Przesuń".
+Usunięcie wierzchołka - po zaznaczeniu wybranego wierzchołka należy w podmenu "edycja wierzchołka" nacisnąć "Usuń".
+
+Przesunięcie krawędzi - po zaznaczeniu wybranej krawędzi należy w podmenu "edycja krawędzi" wpisać przesunięcie na osi X i Y i nacisnąć "Przesuń".
+Dodanie wierzchołka w środku krawędzi - po zaznaczeniu wybranej krawędzi należy w podmenu "edycja krawędzi" nacisnąć "Podpodział".
+
+Przesunięcie całego wielokąta - po zaznaczeniu wierzchołka wybranego wielokąta należy w podmenu "edycja wielokąta" wpisać przesunięcie na osi X i Y i nacisnąć "Przesuń".
+Usunięcie całego wielokąta - po zaznaczeniu wierzchołka wybranego wielokąta należy w podmenu "edycja wielokąta" nacisnąć "Usuń".
+
+Przesunięcie okręgu - po zaznaczeniu okręgu należy w podmenu "edycja okręgu" wpisać nowe współrzędne środka i promień.
+Usunięcie okręgu - po zaznaczeniu okręgu należy w podmenu "edycja okręgu" nacisnąć "Usuń"
+Stały promień okręgu - to ograniczenie jest zawsze spełnione, promień okręgu zawsze trzeba zmienić w jawny sposób poprzez edycję.
+
+Skasowanie relacji - po zaznaczeniu krawędzi bądź pary krawędzi wybrać w odpowiednim podmenu "Brak relacji".
+
+Krawędzie prostopadłe - po zaznaczeniu pary krawędzi należy w podmenu "edycja pary krawędzi" wybrać "Prostopadłe" i nacisnąć "Edytuj". UWAGA: Może spowodować to anulowanie ograniczeń 
+sąsiednich krawędzi. Nie ma gwarancji tego, jaką długość będzie miała zmieniana krawędź, w szczególności może wyjść poza ekran.
+
+Ustalona długość krawędzi - po zaznaczeniu wybranej krawędzi należy w podmenu "inne ograniczenia" wpisać żądaną długość i nacisnąć "Edytuj".
+Równa długość dwóch krawędzi - można ustawić długość dwóch krawędzi w sposób opisany powyżej.
+Krawędź styczna do okręgu - po zaznaczeniu wybranej krawędzi i okręgu należy w podmenu "inne ograniczenia" wybrać "styczna do okręgu" i nacisnąć "Edytuj".
+
+UWAGA! W bardzo rzadkich przypadkach (mam nadzieję, że udało mi się to usunąć, piszę dla bezpieczeństwa)
+po usuwaniu lub przesuwaniu wierzchołków wielokąta na ekranie mogą zostawać "wierzchołki" nienależące do żadnego wielokąta. 
+Nie należy próbować ich edytować, bo program przestanie działać. Jeśli jednak się pojawią, to operacja przesunięcia wierzchołka/całego wielokąta powinna spowodować usunięcie takiego wierzchołka.
+Jeżeli jakiś wierzchołek jest niewidoczny, to kliknięcie na miejsce bez żadnego wielokąta na ekranie powinno go przywrócić.
+
+  

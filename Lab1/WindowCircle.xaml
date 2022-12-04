@@ -1,0 +1,29 @@
+﻿<Window x:Class="Lab1.WindowCircle"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Lab1"
+        mc:Ignorable="d"
+        Title="New circle" Height="200" Width="200">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"></RowDefinition>
+            <RowDefinition Height="Auto"></RowDefinition>
+            <RowDefinition Height="Auto"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Label Grid.Row="0" Grid.Column="0">X of center:</Label>
+        <TextBox Grid.Row="0" Grid.Column="1" x:Name="txtCenterX" Width="75"></TextBox>
+        <Label Grid.Row="1" Grid.Column="0">Y of center:</Label>
+        <TextBox Grid.Row="1" Grid.Column="1" x:Name="txtCenterY" Width="75"></TextBox>
+        <Label Grid.Row="2" Grid.Column="0">Radius:</Label>
+        <TextBox Grid.Row="2" Grid.Column="1" x:Name="txtRadius" Width="75"></TextBox>
+        <Button x:Name="btnAccept" Grid.Row="3" Grid.Column="0" Height="25" Width="50" IsDefault="True" Click="btnAccept_Click">OK</Button>
+        <Button x:Name="btnCancel" Grid.Row="3" Grid.Column="1" Height="25" Width="50" IsCancel="True">Cancel</Button>
+    </Grid>
+</Window>

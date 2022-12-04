@@ -1,0 +1,9 @@
+Przy przesuwaniu wierzchołka lub krawędzi program sprawdza, czy któraś z krawędzi wielokąta ma relacje. Jeśli tak, zamiast przesuwania wierzchołka lub krawędzi wywoływane jest 
+przesunięcie całego wielokąta o zadany wektor, razem z dołączonymi okręgami i innymi wielokątami (jeżeli któraś krawędź jest zdefiniowana jako prostopadła). Żeby uniknąć dziwnych
+przypadków, ustalenie sztywnej długości krawędzi jest niemożliwe, gdy któraś z sąsiednich krawędzi ma już jakieś ograniczenie. Ponadto zmiana położenia krawędzi przy ustalaniu prostopadłości może anulować ograniczenia sąsiednich krawędzi.
+
+Kolory krawędzi:
+- Niebieski - brak relacji.
+- Zielony - ustalona długość krawędzi
+- Błękitny - krawędzie prostopadłe.
+- Pomarańczowy - krawędź styczna do okręgu.
